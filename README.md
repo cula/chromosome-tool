@@ -1,12 +1,13 @@
 # Chromosome Tool
 This is tools to re-assemble chromosome fragments
 
-#$ Usage
+# Usage
 
 ### requirement
 - java 8
 
 ### Cmd
+Just download the jar from bin file.
 ```bash
 Chromosome tools 0.1
 Usage: java -jar <path-to-your-jar> [options]
