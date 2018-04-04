@@ -33,5 +33,6 @@ No~ There are not many codes. Please read it...
 - run `sbt assembly`
 
 ## TODO List
-- Performance Test: lack of data.
-- Support multi-thread
+- ~~Performance Test: lack of data.~~ Cannot done before because of misunderstanding. Now fixed.
+- ~~Support multi-thread~~ Tested the boundary of 50 size and 1000 length in the happiest way.
+It seems multi-thread not needed according to the test result.
