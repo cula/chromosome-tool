@@ -17,8 +17,9 @@ object Main extends App {
             logger.error("Loading data from file failed")
             throw ex
         }
-      val chromosomes = entries.map(_.sequence)
-      val result = ChromosomeUtils.reassembleStrict(chromosomes)
+      val fragments = entries.map(_.sequence)
+      val chromosome = new StrictChromosome(fragments)
+      val result = chromosome.reassemble()
       new PrintWriter(config.out) {
         try
           write(result)
