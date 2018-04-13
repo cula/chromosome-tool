@@ -37,7 +37,6 @@ class StrictChromosome(iFragmentSeq: Seq[String]) {
       case 0 =>
       case 1 => g.add(fragments.head)
       case _ =>
-        val start = System.currentTimeMillis
         fragments.toList.combinations(2).foreach(c => {
           List(c, c.reverse).foreach(i => {
             val minMatchLength = (i.last.length / 2.0).round.toInt
@@ -46,7 +45,6 @@ class StrictChromosome(iFragmentSeq: Seq[String]) {
               g.add(i.last ~> i.head % maxMatchLength)
           })
         })
-        val end = System.currentTimeMillis
     }
     g
   }
